@@ -38,10 +38,11 @@ app.use(helmet())
 
 app.use(
   cors({
-    origin: config.FRONTEND_URL || 'http://localhost:5173',
+    origin: process.env.FRONTEND_URL,
     credentials: true
   })
-)
+)  
+
 
 // ============================================================
 // Body Parsing
